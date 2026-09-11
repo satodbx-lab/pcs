@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ *  デザイントークン — 士業・団体系の信頼感（藍 × 和紙 × 真鍮）
+ * ------------------------------------------------------------------ */
+:root {
+  --ground: #f4f6f9;
+  --surface: #ffffff;
+  --surface-2: #eef1f6;
+  --ink: #16202e;
+  --muted: #5a6675;
+  --line: #dee3ec;
+  --brand: #1b3a8f;
+  --brand-ink: #14306f;
+  --brand-contrast: #ffffff;
+  --accent: #b78a34;
+  --good: #1f7a5c;
+  --warn: #a4552a;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --ground: #0d1420;
+    --surface: #131c2b;
+    --surface-2: #1a2536;
+    --ink: #e7ecf4;
+    --muted: #97a4b6;
+    --line: #26324a;
+    --brand: #7098ea;
+    --brand-ink: #a9c1f2;
+    --brand-contrast: #0a1122;
+    --accent: #d9b968;
+    --good: #4bbf98;
+    --warn: #d98a5f;
+
+    color-scheme: dark;
+  }
+}
+
+.dark {
+  --ground: #0d1420;
+  --surface: #131c2b;
+  --surface-2: #1a2536;
+  --ink: #e7ecf4;
+  --muted: #97a4b6;
+  --line: #26324a;
+  --brand: #7098ea;
+  --brand-ink: #a9c1f2;
+  --brand-contrast: #0a1122;
+  --accent: #d9b968;
+  --good: #4bbf98;
+  --warn: #d98a5f;
+
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-ground: var(--ground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-contrast: var(--brand-contrast);
+  --color-accent: var(--accent);
+  --color-good: var(--good);
+  --color-warn: var(--warn);
+
+  --font-display: var(--font-zen), var(--font-noto), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-noto), ui-sans-serif, system-ui, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --text-fluid-h1: clamp(1.9rem, 4.6vw, 3rem);
+  --text-fluid-h2: clamp(1.5rem, 3.2vw, 2.1rem);
+}
+
+/* ------------------------------------------------------------------ *
+ *  ベース
+ * ------------------------------------------------------------------ */
+* {
+  border-color: var(--line);
+}
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  line-height: 1.85;
+  font-feature-settings: "palt";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.35;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--brand) 22%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@keyframes cw-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cw-reveal {
+  animation: cw-rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 藍地に細かなドット（現行サイトのハーフトーンを踏襲、上品に） */
+.brand-field {
+  background-color: var(--brand);
+  background-image: radial-gradient(
+    color-mix(in srgb, #ffffff 12%, transparent) 1px,
+    transparent 1.4px
+  );
+  background-size: 14px 14px;
+}
