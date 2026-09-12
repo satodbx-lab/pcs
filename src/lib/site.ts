@@ -23,8 +23,14 @@ export const site = {
   domain: "energysite.net",
   url: "https://energysite.net",
   contactPath: "/contact",
-  /** フォーム送信不可時の mailto フォールバック先。実アドレスに置き換えてください。 */
+  /** 表示用の問い合わせ先（連絡先ページ等に掲載） */
   contactEmail: "info@energysite.net",
+  /** お問い合わせフォームの実際の送信先（複数指定可） */
+  contactRecipients: [
+    "info@energysite.net",
+    "sato.dbx@gmail.com",
+    "yuuyuurental@gmail.com",
+  ],
 };
 
 export const nav = [

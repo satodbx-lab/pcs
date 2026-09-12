@@ -1,6 +1,7 @@
 "use server";
 
 import { Resend } from "resend";
+import { site } from "@/lib/site";
 
 export type InquiryState = {
   ok: boolean;
@@ -50,10 +51,13 @@ export async function submitInquiry(
   ].join("\n");
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
   const from = process.env.CONTACT_FROM_EMAIL;
+  // 環境変数で追加の宛先を指定できるが、既定では site.contactRecipients 全員に送る
+  const to = process.env.CONTACT_TO_EMAIL
+    ? [...new Set([process.env.CONTACT_TO_EMAIL, ...site.contactRecipients])]
+    : site.contactRecipients;
 
-  if (!apiKey || !to || !from) {
+  if (!apiKey || !from) {
     return {
       ok: false,
       message:

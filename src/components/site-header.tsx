@@ -19,15 +19,27 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-ground/85 backdrop-blur-md">
-      <div className="mx-auto flex min-h-16 max-w-[1120px] items-center gap-5 px-5 py-3 sm:px-8">
-        <Link href="/" className="flex shrink-0 items-center gap-3 text-ink">
+      <div className="mx-auto flex min-h-16 max-w-[1120px] items-center gap-3 px-5 py-3 sm:px-8">
+        <button
+          type="button"
+          aria-label="メニュー"
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+          className="grid h-9 w-9 shrink-0 place-items-center rounded-sm border border-line text-muted lg:hidden"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M3 6h18M3 12h18M3 18h18" />}
+          </svg>
+        </button>
+
+        <Link href="/" className="flex min-w-0 items-center gap-3 text-ink lg:shrink-0">
           <Mark className="h-9 w-9 shrink-0 text-brand sm:h-11 sm:w-11" />
-          <span className="flex flex-col leading-tight">
-            <span className="font-display text-[1.5rem] font-bold tracking-[0.02em] sm:text-[1.96rem]">
+          <span className="flex min-w-0 flex-col leading-tight">
+            <span className="truncate font-display text-[1.15rem] font-bold tracking-[0.02em] sm:text-[1.96rem]">
               {site.name}
             </span>
-            <span className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-muted">
-              {site.shortName} — {site.styleName}
+            <span className="truncate font-mono text-[0.6rem] uppercase tracking-[0.2em] text-muted">
+              副業・資金調達案内
             </span>
           </span>
         </Link>
@@ -44,7 +56,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="ml-auto flex items-center gap-2 lg:ml-0">
+        <div className="ml-auto flex shrink-0 items-center gap-2 lg:ml-0">
           <ThemeToggle />
           <Link
             href="/contact"
@@ -52,17 +64,6 @@ export function SiteHeader() {
           >
             相談する
           </Link>
-          <button
-            type="button"
-            aria-label="メニュー"
-            aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
-            className="grid h-9 w-9 place-items-center rounded-sm border border-line text-muted lg:hidden"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M3 6h18M3 12h18M3 18h18" />}
-            </svg>
-          </button>
         </div>
       </div>
 

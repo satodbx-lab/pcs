@@ -23,9 +23,9 @@ export function ContactForm() {
 
   const mailtoHref =
     state.mailtoBody &&
-    `mailto:${site.contactEmail}?subject=${encodeURIComponent("お問い合わせ")}&body=${encodeURIComponent(
-      state.mailtoBody,
-    )}`;
+    `mailto:${site.contactRecipients.join(",")}?subject=${encodeURIComponent(
+      "お問い合わせ",
+    )}&body=${encodeURIComponent(state.mailtoBody)}`;
 
   return (
     <form action={action} className="flex flex-col gap-5">
