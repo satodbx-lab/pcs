@@ -32,13 +32,13 @@ export function SiteHeader() {
           </svg>
         </button>
 
-        <Link href="/" className="flex min-w-0 items-center gap-3 text-ink lg:shrink-0">
-          <Mark className="h-9 w-9 shrink-0 text-brand sm:h-11 sm:w-11" />
-          <span className="flex min-w-0 flex-col leading-tight">
-            <span className="truncate font-display text-[1.15rem] font-bold tracking-[0.02em] sm:text-[1.96rem]">
+        <Link href="/" className="flex min-w-0 items-center gap-2 self-stretch py-1.5 text-ink sm:gap-3 lg:shrink-0 lg:self-auto lg:py-0">
+          <Mark className="h-7 w-7 shrink-0 text-brand sm:h-9 sm:w-9 lg:h-11 lg:w-11" />
+          <span className="flex min-w-0 flex-col justify-center leading-[1.25] sm:leading-tight">
+            <span className="text-balance font-display text-[0.88rem] font-bold leading-[1.2] tracking-[0.01em] sm:truncate sm:leading-tight sm:text-[1.4rem] lg:text-[1.96rem]">
               {site.name}
             </span>
-            <span className="truncate font-mono text-[0.6rem] uppercase tracking-[0.2em] text-muted">
+            <span className="truncate font-mono text-[0.55rem] uppercase tracking-[0.16em] text-muted sm:text-[0.6rem] sm:tracking-[0.2em]">
               副業・資金調達案内
             </span>
           </span>
