@@ -6,18 +6,22 @@ import { AnimatePresence, motion } from "motion/react";
 import { site } from "@/lib/site";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Mark } from "@/components/mark";
+import { AnnouncementBar } from "@/components/announcement-bar";
 
 const menu = [
   { href: "/#style", label: "PCSスタイルとは" },
   { href: "/#pillars", label: "4つの情報" },
   { href: "/#ventures", label: "仕事紹介" },
   { href: "/#funding", label: "資金調達" },
+  { href: "/#ai", label: "AI化支援" },
 ];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
+    <>
+    <AnnouncementBar />
     <header className="sticky top-0 z-30 border-b border-line bg-ground/85 backdrop-blur-md">
       <div className="mx-auto flex min-h-16 max-w-[1120px] items-center gap-3 px-5 py-3 sm:px-8">
         <button
@@ -99,5 +103,6 @@ export function SiteHeader() {
         )}
       </AnimatePresence>
     </header>
+    </>
   );
 }

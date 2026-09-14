@@ -1,8 +1,10 @@
 import { SiteHeader } from "@/components/site-header";
 import { Hero } from "@/components/hero";
+import { SeminarSpotlight } from "@/components/seminar-spotlight";
 import { EraShift } from "@/components/era-shift";
 import { SupportPillars } from "@/components/support-pillars";
 import { Concerns } from "@/components/concerns";
+import { AiSupport } from "@/components/ai-support";
 import { Restructuring } from "@/components/restructuring";
 import { Ventures } from "@/components/ventures";
 import { Funding } from "@/components/funding";
@@ -17,9 +19,11 @@ export default function Home() {
       <SiteHeader />
       <main className="flex-1">
         <Hero />
+        <SeminarSpotlight />
         <EraShift />
         <SupportPillars />
         <Concerns />
+        <AiSupport />
         <Restructuring />
         <Ventures />
         <Funding />
