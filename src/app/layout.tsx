@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Zen_Kaku_Gothic_New, Noto_Sans_JP, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { JsonLd } from "@/components/json-ld";
+import { site } from "@/lib/site";
 
 const zen = Zen_Kaku_Gothic_New({
   variable: "--font-zen",
@@ -42,6 +44,41 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     type: "website",
   },
+  alternates: {
+    canonical: siteUrl,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: site.name,
+  alternateName: site.shortName,
+  url: siteUrl,
+  logo: `${siteUrl}/icon.svg`,
+  description:
+    "地方・一人・低固定費で働く「PCSスタイル」を確立・実践するための情報を発信するメディア。",
+  parentOrganization: {
+    "@type": "Organization",
+    name: site.operator,
+  },
+  sameAs: [],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  url: siteUrl,
+  inLanguage: "ja",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -54,6 +91,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${zen.variable} ${noto.variable} ${plexMono.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">
+        <JsonLd data={organizationJsonLd} />
+        <JsonLd data={websiteJsonLd} />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

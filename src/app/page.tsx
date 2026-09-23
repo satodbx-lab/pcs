@@ -12,10 +12,44 @@ import { Association } from "@/components/association";
 import { Updates } from "@/components/updates";
 import { ContactCta } from "@/components/contact-cta";
 import { SiteFooter } from "@/components/site-footer";
+import { JsonLd } from "@/components/json-ld";
+import { seminar, site } from "@/lib/site";
+
+const seminarJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: seminar.title,
+  description: seminar.teaser,
+  startDate: seminar.startIso,
+  endDate: seminar.endIso,
+  eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+  eventStatus: "https://schema.org/EventScheduled",
+  location: {
+    "@type": "VirtualLocation",
+    url: seminar.registerUrl,
+  },
+  organizer: {
+    "@type": "Organization",
+    name: seminar.organizer,
+  },
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "JPY",
+    availability: "https://schema.org/InStock",
+    url: seminar.registerUrl,
+  },
+  performer: {
+    "@type": "Person",
+    name: seminar.speakerName,
+  },
+  url: `${site.url}/#seminar`,
+};
 
 export default function Home() {
   return (
     <>
+      <JsonLd data={seminarJsonLd} />
       <SiteHeader />
       <main className="flex-1">
         <Hero />
