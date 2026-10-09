@@ -80,6 +80,14 @@ const organizationJsonLd = {
       streetAddress: "北町1-8-16",
     },
   },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: site.phoneE164,
+    email: site.contactEmail,
+    contactType: "customer service",
+    areaServed: "JP",
+    availableLanguage: "Japanese",
+  },
   // 私的整理に関するご相談を提供する関連団体（代表理事は同一人物）
   affiliation: {
     "@type": "Organization",

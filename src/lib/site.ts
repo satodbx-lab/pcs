@@ -32,6 +32,12 @@ export const site = {
   domain: "energysite.net",
   url: "https://energysite.net",
   contactPath: "/contact",
+  /** 電話番号（倒産回避支援中小企業協会の番号。高次元経営中小企業協会は固定電話がないため共通で使用） */
+  phone: "03-6822-5884",
+  phoneE164: "+81-3-6822-5884",
+  phoneHours: "9:00〜19:00（土日祝も可）",
+  /** プライバシーポリシーの最終改定日 */
+  privacyRevised: "2026年8月26日",
   /** 表示用の問い合わせ先（連絡先ページ等に掲載） */
   contactEmail: "info@energysite.net",
   /** お問い合わせフォームの実際の送信先（複数指定可） */

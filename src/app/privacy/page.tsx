@@ -46,11 +46,11 @@ export default function PrivacyPage() {
           <br />
           {site.address}
           <br />
+          電話：{site.phone}（受付時間 {site.phoneHours}）
+          <br />
           メール：{site.contactEmail}
         </p>
-        <p className="text-[0.82rem] text-muted">
-          制定日：［YYYY年M月D日］／ 最終改定日：［YYYY年M月D日］
-        </p>
+        <p className="text-[0.82rem] text-muted">最終改定日：{site.privacyRevised}</p>
       </Prose>
     </PageShell>
   );
