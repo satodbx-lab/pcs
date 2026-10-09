@@ -4,6 +4,10 @@ import { updates } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "お知らせ一覧",
+  alternates: { canonical: "/news" },
+  // お知らせが0件の間は中身のない薄いページになるため、インデックス対象外にする
+  // （updates に1件追加すると自動的にインデックス対象に戻る）
+  robots: { index: updates.length > 0, follow: true },
   description: "更新情報・お知らせの一覧です。",
 };
 

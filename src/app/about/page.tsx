@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "このサイトについて",
+  alternates: { canonical: "/about" },
   description:
     "「小さいから儲かる仕事研究会」の目的と運営体制についてご案内します。",
 };

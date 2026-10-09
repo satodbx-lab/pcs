@@ -4,6 +4,7 @@ import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
   title: "お問い合わせフォーム",
+  alternates: { canonical: "/contact" },
   description:
     "私的整理・資金調達・財務改善などのご相談を受け付けています。相談は無料、秘密は厳守します。",
 };

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { Hero } from "@/components/hero";
 import { SeminarSpotlight } from "@/components/seminar-spotlight";
@@ -14,6 +15,10 @@ import { ContactCta } from "@/components/contact-cta";
 import { SiteFooter } from "@/components/site-footer";
 import { JsonLd } from "@/components/json-ld";
 import { seminar, site } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const seminarJsonLd = {
   "@context": "https://schema.org",

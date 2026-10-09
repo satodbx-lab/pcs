@@ -44,9 +44,8 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     type: "website",
   },
-  alternates: {
-    canonical: siteUrl,
-  },
+  // canonical は各ページで個別に指定する（ルートで固定すると全ページが
+  // トップページの重複扱いになってしまうため）
   robots: {
     index: true,
     follow: true,

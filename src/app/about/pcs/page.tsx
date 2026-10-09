@@ -5,6 +5,7 @@ import { PageShell, Prose } from "@/components/page-shell";
 
 export const metadata: Metadata = {
   title: "PCSとは",
+  alternates: { canonical: "/about/pcs" },
   description:
     "地方・一人・低固定費で働く「PCSスタイル」の考え方と、確立・実践のための4つの情報について。",
 };

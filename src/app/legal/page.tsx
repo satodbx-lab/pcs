@@ -3,6 +3,7 @@ import { PageShell, Prose } from "@/components/page-shell";
 
 export const metadata: Metadata = {
   title: "特定商取引法に基づく表記",
+  alternates: { canonical: "/legal" },
   description: "特定商取引法に基づく表記です。",
 };
 

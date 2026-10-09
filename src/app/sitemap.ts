@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { site } from "@/lib/site";
+import { site, updates } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
@@ -8,7 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about/pcs",
     "/about/profile",
     "/links",
-    "/news",
+    // お知らせが0件の間は noindex にしているため、サイトマップにも載せない
+    ...(updates.length > 0 ? ["/news"] : []),
     "/contact",
     "/privacy",
     "/legal",

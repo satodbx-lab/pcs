@@ -3,6 +3,7 @@ import { PageShell, Prose } from "@/components/page-shell";
 
 export const metadata: Metadata = {
   title: "お役立ちリンク集",
+  alternates: { canonical: "/links" },
   description:
     "経営者の再スタートに役立つ、公的機関・支援制度などの情報源をまとめています。",
 };

@@ -4,6 +4,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "運営者・執筆者プロフィール",
+  alternates: { canonical: "/about/profile" },
   description: "本サイトの運営者・執筆者についてご案内します。",
 };
 

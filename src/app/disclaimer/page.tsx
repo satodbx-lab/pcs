@@ -3,6 +3,7 @@ import { PageShell, Prose } from "@/components/page-shell";
 
 export const metadata: Metadata = {
   title: "免責事項",
+  alternates: { canonical: "/disclaimer" },
   description: "本サイトのコンテンツに関する免責事項です。",
 };
 

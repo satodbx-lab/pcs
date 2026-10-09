@@ -4,6 +4,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー",
+  alternates: { canonical: "/privacy" },
   description: "個人情報の取り扱いについて定めたプライバシーポリシーです。",
 };
 
