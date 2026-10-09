@@ -14,13 +14,13 @@ export default function ProfilePage() {
       <Prose>
         <h2>運営</h2>
         <p>
-          {site.publisher}　代表 {site.representative}
+          {site.publisher}（{site.publisherType}）　代表 {site.representative}
           <br />
           {site.address}
         </p>
         <p>
-          私的整理（時管式）の知見は、{site.operator}の知見をもとにしています。
-          負債の処理・個人資産の保全から、PCSスタイルへの移行までを一貫して支援しています。
+          私的整理に関するご相談は、{site.operator}（{site.operatorRepresentative}）が提供しています。
+          本サイトでは、その知見をもとに、負債の整理からPCSスタイルへの移行までを一貫して紹介しています。
         </p>
         <h2>執筆</h2>
         <p>{site.writer}</p>

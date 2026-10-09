@@ -70,6 +70,19 @@ const organizationJsonLd = {
     "地方・一人・低固定費で働く「PCSスタイル」を確立・実践するための情報を発信するメディア。",
   parentOrganization: {
     "@type": "Organization",
+    name: site.publisher,
+    founder: { "@type": "Person", name: site.representative },
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "JP",
+      addressRegion: "埼玉県",
+      addressLocality: "蕨市",
+      streetAddress: "北町1-8-16",
+    },
+  },
+  // 私的整理に関するご相談を提供する関連団体（代表理事は同一人物）
+  affiliation: {
+    "@type": "Organization",
     name: site.operator,
   },
   sameAs: [],

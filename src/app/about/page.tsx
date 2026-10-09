@@ -15,7 +15,7 @@ export default function AboutPage() {
     <PageShell
       eyebrow="About"
       title="このサイトについて"
-      intro={`「${site.name}」は、${site.operator}が運営する情報発信メディアです。`}
+      intro={`「${site.name}」は、${site.publisher}が運営する情報発信メディアです。`}
     >
       <Prose>
         <p>

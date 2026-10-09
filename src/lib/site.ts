@@ -22,8 +22,12 @@ export const site = {
   operator: "一般社団法人 倒産回避支援中小企業協会",
   /** 本サイトの運営者（特商法表記・プライバシーポリシー・フッター等に表示） */
   publisher: "高次元経営中小企業協会",
+  /** 法人格はなく個人事業。誤解を避けるため事業者表記では併記する */
+  publisherType: "個人事業",
   representative: "佐藤俊明",
   address: "埼玉県蕨市北町1-8-16",
+  /** 私的整理に関するご相談は operator（一般社団法人）が提供し、代表理事は同一人物 */
+  operatorRepresentative: "代表理事 佐藤俊明",
   writer: "事務局 小山",
   domain: "energysite.net",
   url: "https://energysite.net",
