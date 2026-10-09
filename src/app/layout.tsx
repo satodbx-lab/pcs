@@ -92,6 +92,14 @@ const organizationJsonLd = {
   affiliation: {
     "@type": "Organization",
     name: site.operator,
+    telephone: site.phoneE164,
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "JP",
+      addressRegion: "東京都",
+      addressLocality: "中央区",
+      streetAddress: "佃1-11-8 ピアウェストスクエア353",
+    },
   },
   sameAs: [],
 };

@@ -19,7 +19,7 @@ export function Association() {
                   本サイトの運営
                 </p>
                 <p className="mt-1 text-[1.05rem] font-bold text-ink">
-                  {site.publisher}（{site.publisherType}）
+                  {site.publisher}
                 </p>
                 <p className="text-[0.86rem] text-muted">代表 {site.representative}</p>
                 <p className="mt-3 text-[0.9rem] leading-[1.95] text-muted">

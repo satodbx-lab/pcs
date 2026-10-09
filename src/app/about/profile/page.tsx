@@ -14,7 +14,7 @@ export default function ProfilePage() {
       <Prose>
         <h2>運営</h2>
         <p>
-          {site.publisher}（{site.publisherType}）　代表 {site.representative}
+          {site.publisher}　代表 {site.representative}
           <br />
           {site.address}
         </p>

@@ -16,7 +16,7 @@ export function SiteFooter() {
               {site.tagline}
             </p>
             <p className="mt-4 text-[0.8rem] text-muted">
-              運営：{site.publisher}（{site.publisherType}）　代表 {site.representative}
+              運営：{site.publisher}　代表 {site.representative}
             </p>
             <p className="mt-1 text-[0.8rem] text-muted">
               私的整理のご相談：{site.operator}（{site.operatorRepresentative}）

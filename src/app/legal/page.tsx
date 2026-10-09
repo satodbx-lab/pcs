@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageShell, Prose } from "@/components/page-shell";
+import { PageShell } from "@/components/page-shell";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ const sellers: { heading: string; scope: string; rows: Row[] }[] = [
     rows: [
       { label: "事業者名", value: site.operator },
       { label: "代表者", value: site.operatorRepresentative },
-      { label: "所在地", value: "［所在地］" },
+      { label: "所在地", value: site.operatorAddress },
       { label: "電話番号", value: `${site.phone}（受付時間 ${site.phoneHours}）` },
       { label: "メールアドレス", value: site.contactEmail },
     ],
@@ -27,7 +27,7 @@ const sellers: { heading: string; scope: string; rows: Row[] }[] = [
     heading: "上記以外のサービス",
     scope: "仕事紹介、セミナー、AI学習プログラム、業務用AIシステムの提供ほか",
     rows: [
-      { label: "事業者名", value: `${site.publisher}（${site.publisherType}）` },
+      { label: "事業者名", value: site.publisher },
       { label: "代表者", value: site.representative },
       { label: "所在地", value: site.address },
       {
@@ -90,11 +90,6 @@ export default function LegalPage() {
           <RowsTable rows={commonRows} />
         </section>
       </div>
-      <Prose>
-        <p className="mt-8 text-[0.82rem] text-muted">
-          ※ 角括弧［　］の項目は、事業者ご自身の情報を記載してください。
-        </p>
-      </Prose>
     </PageShell>
   );
 }
