@@ -15,7 +15,7 @@ export function SiteFooter() {
             <p className="mt-4 max-w-[24rem] text-[0.82rem] leading-[1.9] text-muted">
               {site.tagline}
             </p>
-            <p className="mt-4 text-[0.8rem] text-muted">運営：{site.operator}</p>
+            <p className="mt-4 text-[0.8rem] text-muted">運営：{site.publisher}　代表 {site.representative}</p>
           </div>
 
           <nav aria-label="規約・お問い合わせ">

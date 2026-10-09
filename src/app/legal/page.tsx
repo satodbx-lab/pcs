@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageShell, Prose } from "@/components/page-shell";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "特定商取引法に基づく表記",
@@ -8,9 +9,9 @@ export const metadata: Metadata = {
 };
 
 const rows: { label: string; value: string }[] = [
-  { label: "事業者名", value: "［一般社団法人 倒産回避支援中小企業協会］" },
-  { label: "代表者", value: "［代表者氏名］" },
-  { label: "所在地", value: "［〒000-0000 住所］" },
+  { label: "事業者名", value: site.publisher },
+  { label: "代表者", value: site.representative },
+  { label: "所在地", value: site.address },
   { label: "電話番号", value: "［電話番号／受付時間］" },
   { label: "メールアドレス", value: "info@energysite.net" },
   { label: "役務の対価", value: "個別のお見積り・ご案内時に明示します" },

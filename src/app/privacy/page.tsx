@@ -13,7 +13,7 @@ export default function PrivacyPage() {
     <PageShell
       eyebrow="Privacy"
       title="プライバシーポリシー"
-      intro={`${site.operator}（以下「当会」）は、本サイトで取得する個人情報を次のとおり取り扱います。`}
+      intro={`${site.publisher}（以下「当会」）は、本サイトで取得する個人情報を次のとおり取り扱います。`}
     >
       <Prose>
         <h2>1. 取得する情報</h2>
@@ -41,7 +41,13 @@ export default function PrivacyPage() {
           保有個人データの開示・訂正・利用停止等をご希望の場合は、お問い合わせ窓口までご連絡ください。
         </p>
         <h2>6. お問い合わせ窓口</h2>
-        <p>［事業者名・担当部署・連絡先を記載してください］</p>
+        <p>
+          {site.publisher}（代表 {site.representative}）
+          <br />
+          {site.address}
+          <br />
+          メール：{site.contactEmail}
+        </p>
         <p className="text-[0.82rem] text-muted">
           制定日：［YYYY年M月D日］／ 最終改定日：［YYYY年M月D日］
         </p>

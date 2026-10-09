@@ -18,7 +18,12 @@ export const site = {
   /** Pillar 02（会社の整理）で扱う、私的整理の仕組みとしての「PCS」の意味 */
   serviceName: "PCS（Profit Creation System）",
   tagline: "小さなビジネスだからこそ実現できる、自由で豊かな働き方を一緒に探求しましょう。",
+  /** 私的整理（時管式）の知見の提供元として本文中で言及している団体 */
   operator: "一般社団法人 倒産回避支援中小企業協会",
+  /** 本サイトの運営者（特商法表記・プライバシーポリシー・フッター等に表示） */
+  publisher: "高次元経営中小企業協会",
+  representative: "佐藤俊明",
+  address: "埼玉県蕨市北町1-8-16",
   writer: "事務局 小山",
   domain: "energysite.net",
   url: "https://energysite.net",
