@@ -1,5 +1,6 @@
 import { seminar } from "@/lib/site";
 import { Reveal } from "@/components/reveal";
+import { TrackedLink } from "@/components/tracked-link";
 
 export function SeminarSpotlight() {
   return (
@@ -46,14 +47,16 @@ export function SeminarSpotlight() {
             </dl>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
+              <TrackedLink
                 href={seminar.registerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                eventName="seminar_register_click"
+                eventParams={{ location: "spotlight" }}
                 className="inline-flex items-center rounded-sm bg-brand-contrast px-6 py-3 text-[0.92rem] font-bold text-brand transition-opacity hover:opacity-90"
               >
                 無料で申し込む
-              </a>
+              </TrackedLink>
               <span className="text-[0.78rem] text-brand-contrast/60">{seminar.registerNote}</span>
             </div>
           </div>

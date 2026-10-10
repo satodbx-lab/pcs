@@ -3,6 +3,7 @@ import { Zen_Kaku_Gothic_New, Noto_Sans_JP, IBM_Plex_Mono } from "next/font/goog
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { JsonLd } from "@/components/json-ld";
+import { Analytics } from "@/components/analytics";
 import { site } from "@/lib/site";
 
 const zen = Zen_Kaku_Gothic_New({
@@ -126,6 +127,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <JsonLd data={websiteJsonLd} />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
+      <Analytics />
     </html>
   );
 }

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { announcement } from "@/lib/site";
+import { TrackedLink } from "@/components/tracked-link";
 
 export function AnnouncementBar() {
   if (!announcement.active) return null;
@@ -16,13 +16,15 @@ export function AnnouncementBar() {
         </span>
         <span className="font-bold">{announcement.text}</span>
         <span className="hidden text-brand-contrast/85 sm:inline">{announcement.detail}</span>
-        <Link
+        <TrackedLink
           href={announcement.href}
           {...linkProps}
+          eventName="seminar_register_click"
+          eventParams={{ location: "banner" }}
           className="font-bold underline underline-offset-2 hover:opacity-90"
         >
           {announcement.cta}
-        </Link>
+        </TrackedLink>
       </div>
     </div>
   );

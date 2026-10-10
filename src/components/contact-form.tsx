@@ -1,8 +1,9 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 import { submitInquiry, type InquiryState } from "@/app/actions";
 import { site } from "@/lib/site";
+import { trackEvent } from "@/lib/track";
 
 const field =
   "w-full rounded-sm border border-line bg-ground px-3.5 py-2.5 text-[0.92rem] text-ink outline-none transition-colors focus:border-brand";
@@ -11,6 +12,11 @@ const initial: InquiryState = { ok: false, message: "" };
 
 export function ContactForm() {
   const [state, action, pending] = useActionState(submitInquiry, initial);
+
+  // 送信完了を GA4 の「リード」として計測（入力内容は一切送らない）
+  useEffect(() => {
+    if (state.ok) trackEvent("generate_lead", { form: "contact" });
+  }, [state.ok]);
 
   if (state.ok) {
     return (
