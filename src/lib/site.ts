@@ -39,9 +39,9 @@ export const site = {
    * GA4 の測定ID（G-XXXXXXXXXX）。空の間は計測を行わず、プライバシーポリシーの
    * アクセス解析の記載も一般的な文面のままになる。設定したら privacyRevised も更新すること。
    */
-  gaMeasurementId: "",
+  gaMeasurementId: "G-EDQD8ZYMYV",
   /** プライバシーポリシーの最終改定日 */
-  privacyRevised: "2026年8月26日",
+  privacyRevised: "2026年10月10日",
   /** 表示用の問い合わせ先（連絡先ページ等に掲載） */
   contactEmail: "info@energysite.net",
   /** お問い合わせフォームの実際の送信先（複数指定可） */
