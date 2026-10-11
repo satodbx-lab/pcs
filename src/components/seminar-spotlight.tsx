@@ -31,17 +31,25 @@ export function SeminarSpotlight() {
             </ul>
 
             <dl className="mt-7 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-brand-contrast/20 pt-6 sm:grid-cols-4">
-              {[
-                ["日時", seminar.date],
-                ["時間", seminar.time],
-                ["形式", seminar.format],
-                ["参加費", seminar.fee],
-              ].map(([label, value]) => (
+              {(
+                [
+                  ["日時", [seminar.date, seminar.time]],
+                  ["形式", [seminar.format]],
+                  ["参加費", [seminar.fee]],
+                  ["定員", [seminar.capacity]],
+                ] as [string, string[]][]
+              ).map(([label, lines]) => (
                 <div key={label}>
                   <dt className="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-brand-contrast/60">
                     {label}
                   </dt>
-                  <dd className="mt-1 font-bold text-brand-contrast">{value}</dd>
+                  <dd className="mt-1 font-bold text-brand-contrast">
+                    {lines.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
+                  </dd>
                 </div>
               ))}
             </dl>

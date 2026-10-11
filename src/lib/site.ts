@@ -176,7 +176,7 @@ export const aiSupportLead =
 export const announcement = {
   active: true,
   eyebrow: "Seminar",
-  text: "9/29(火)19:00〜 オンラインセミナー「AIは社員の代わりになるのか」",
+  text: "10/27(火)19:00〜 オンラインセミナー「AIは社員の代わりになるのか」【先着5名】",
   detail: "一人社長・小さな会社のための60分。経理・営業資料・ホームページの実演をそのままお見せします。参加無料。",
   href: "https://yukusue-ai-seminar-lp.vercel.app",
   cta: "無料で申し込む",
@@ -190,13 +190,16 @@ export const seminar = {
   teaser:
     "経理も、営業資料も、ホームページも。言葉で説明しても伝わらないので、実際に動いているものを、そのままお見せします。",
   notes: ["プログラミング経験 不要", "操作不要・見るだけでOK", "カメラ・マイク 不要"],
-  date: "2026年9月29日（火）",
+  date: "2026年10月27日（火）",
   time: "19:00〜20:00",
   /** ISO 8601（構造化データ用） */
-  startIso: "2026-09-29T19:00:00+09:00",
-  endIso: "2026-09-29T20:00:00+09:00",
+  startIso: "2026-10-27T19:00:00+09:00",
+  endIso: "2026-10-27T20:00:00+09:00",
   format: "オンライン（Google Meet）",
   fee: "無料",
+  /** 定員（先着順） */
+  maxAttendees: 5,
+  capacity: "5名（先着順）",
   highlights: [
     {
       n: "01",
@@ -222,13 +225,13 @@ export const seminar = {
   organizer: "株式会社Yukusue（神奈川県横浜市西区みなとみらい）",
   coHost: "高次元経営中小企業協会",
   registerUrl: "https://yukusue-ai-seminar-lp.vercel.app",
-  registerNote: "お申し込みは1分。定員は設けていません。",
+  registerNote: "お申し込みは1分。定員は5名（先着順）です。",
 };
 
 export const aiOfferings = [
   {
     title: "AI活用セミナー",
-    body: "定期開催。次回は2026年9月29日（火）。自分の得意分野をAIでどう伸ばすか、実務に直結する活用法を学べます。",
+    body: "定期開催。次回は2026年10月27日（火）、先着5名。自分の得意分野をAIでどう伸ばすか、実務に直結する活用法を学べます。",
   },
   {
     title: "AI学習プログラム",

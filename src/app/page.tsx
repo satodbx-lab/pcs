@@ -29,6 +29,7 @@ const seminarJsonLd = {
   endDate: seminar.endIso,
   eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
   eventStatus: "https://schema.org/EventScheduled",
+  maximumAttendeeCapacity: seminar.maxAttendees,
   location: {
     "@type": "VirtualLocation",
     url: seminar.registerUrl,
@@ -41,7 +42,7 @@ const seminarJsonLd = {
     "@type": "Offer",
     price: "0",
     priceCurrency: "JPY",
-    availability: "https://schema.org/InStock",
+    availability: "https://schema.org/LimitedAvailability",
     url: seminar.registerUrl,
   },
   performer: {
