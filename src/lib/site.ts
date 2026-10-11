@@ -320,9 +320,12 @@ export const footerLinks = [
   { href: "/contact", label: "お問い合わせフォーム" },
 ];
 
-export const categories = [
-  { href: "/news", label: "未分類" },
-  { href: "/news", label: "資金調達・財務改善" },
+/** フッターのサイト内リンク（検索エンジンがサブページを見つけやすいよう、全ページから張る） */
+export const siteLinks = [
+  { href: "/about", label: "このサイトについて" },
+  { href: "/about/pcs", label: "PCSとは" },
+  { href: "/about/profile", label: "運営者・執筆者プロフィール" },
+  { href: "/links", label: "お役立ちリンク集" },
 ];
 
 export const disclaimerShort =

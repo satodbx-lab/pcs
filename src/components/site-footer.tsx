@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { categories, disclaimerShort, footerLinks, site } from "@/lib/site";
+import { disclaimerShort, footerLinks, siteLinks, site } from "@/lib/site";
 import { Mark } from "@/components/mark";
 
 export function SiteFooter() {
@@ -38,15 +38,15 @@ export function SiteFooter() {
             </ul>
           </nav>
 
-          <nav aria-label="カテゴリー">
+          <nav aria-label="サイト案内">
             <p className="font-mono text-[0.66rem] uppercase tracking-[0.18em] text-muted">
-              Category
+              Site
             </p>
             <ul className="mt-4 flex flex-col gap-2.5 text-[0.85rem]">
-              {categories.map((c) => (
-                <li key={c.href}>
-                  <Link href={c.href} className="text-muted transition-colors hover:text-ink">
-                    {c.label}
+              {siteLinks.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-muted transition-colors hover:text-ink">
+                    {l.label}
                   </Link>
                 </li>
               ))}
