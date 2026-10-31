@@ -32,6 +32,7 @@ export function ConsultationSpotlight() {
             <dl className="mt-7 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-brand-contrast/20 pt-6">
               {(
                 [
+                  ["日時", [consultation.schedule]],
                   ["相談料", [consultation.fee]],
                   ["お申し込み", [consultation.howToApply]],
                 ] as [string, string[]][]
