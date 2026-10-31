@@ -33,6 +33,8 @@ export function ConsultationSpotlight() {
               {(
                 [
                   ["日時", [consultation.schedule]],
+                  ["形式", [consultation.format]],
+                  ["所要時間", [consultation.duration]],
                   ["相談料", [consultation.fee]],
                   ["お申し込み", [consultation.howToApply]],
                 ] as [string, string[]][]
