@@ -48,7 +48,6 @@ export const site = {
   contactRecipients: [
     "info@energysite.net",
     "sato.dbx@gmail.com",
-    "yuuyuurental@gmail.com",
   ],
 };
 
