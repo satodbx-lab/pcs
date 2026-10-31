@@ -25,8 +25,8 @@ export function AiSupport() {
         </div>
 
         <Reveal className="mt-6">
-          <a href="#seminar" className="inline-flex items-center gap-2 text-[0.88rem] font-bold text-brand hover:text-brand-ink">
-            次回セミナーの詳細を見る
+          <a href="#consultation" className="inline-flex items-center gap-2 text-[0.88rem] font-bold text-brand hover:text-brand-ink">
+            個別相談会のご案内を見る
             <span aria-hidden="true">↑</span>
           </a>
         </Reveal>

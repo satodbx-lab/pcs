@@ -19,7 +19,7 @@ export function AnnouncementBar() {
         <TrackedLink
           href={announcement.href}
           {...linkProps}
-          eventName="seminar_register_click"
+          eventName="consultation_click"
           eventParams={{ location: "banner" }}
           className="font-bold underline underline-offset-2 hover:opacity-90"
         >
