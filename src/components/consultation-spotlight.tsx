@@ -61,7 +61,7 @@ export function ConsultationSpotlight() {
                 eventParams={{ location: "spotlight" }}
                 className="inline-flex items-center rounded-sm bg-brand-contrast px-6 py-3 text-[0.92rem] font-bold text-brand transition-opacity hover:opacity-90"
               >
-                お問い合わせフォームへ
+                個別相談会に申し込む
               </TrackedLink>
               <span className="text-[0.78rem] text-brand-contrast/60">
                 ご相談内容がまとまっていなくても構いません
