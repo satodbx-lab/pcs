@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // お知らせが0件の間は noindex にしているため、サイトマップにも載せない
     ...(updates.length > 0 ? ["/news"] : []),
     "/contact",
+    "/consultation/apply",
     "/privacy",
     "/legal",
     "/disclaimer",
@@ -20,6 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${site.url}${path}`,
     lastModified: now,
     changeFrequency: path === "/" ? "weekly" : "monthly",
-    priority: path === "/" ? 1 : path === "/contact" ? 0.8 : 0.5,
+    priority: path === "/" ? 1 : path === "/contact" || path === "/consultation/apply" ? 0.8 : 0.5,
   }));
 }

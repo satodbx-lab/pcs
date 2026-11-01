@@ -177,7 +177,7 @@ export const announcement = {
   eyebrow: "Consultation",
   text: "「AI社員を入れる」個別相談会（無料）を受け付けています",
   detail: "PCSスタイルの始め方。好きな仕事を、好きな場所で、好きな時間に。",
-  href: "/contact",
+  href: "/consultation/apply",
   cta: "無料相談はこちら",
   external: false,
 };
@@ -198,8 +198,8 @@ export const consultation = {
   format: "オンライン",
   duration: "1時間",
   fee: "無料",
-  howToApply: "お問い合わせフォームから",
-  href: "/contact",
+  howToApply: "申込ページのフォームから",
+  href: "/consultation/apply",
   topics: [
     {
       n: "01",
@@ -221,6 +221,40 @@ export const consultation = {
       title: "費用と進め方",
       body: "初期費用を抑えた始め方と、段階的な広げ方を相談できます。",
     },
+  ],
+};
+
+/**
+ * 個別相談会の専用申込ページ（/consultation/apply）の構成。
+ * 条件・テーマは上の consultation と共通。担当者名は未決定のため載せない。
+ */
+export const consultationApply = {
+  path: "/consultation/apply",
+  /** お申し込みから相談までの流れ */
+  steps: [
+    {
+      n: "1",
+      title: "お申し込み",
+      body: "下のフォームに必要事項をご記入のうえ、送信してください。",
+    },
+    {
+      n: "2",
+      title: "日程調整の連絡",
+      body: "ご希望の日時候補を伺いながら、日時を個別に調整します。",
+    },
+    {
+      n: "3",
+      title: "個別相談",
+      body: "オンラインで1時間、無料でご相談いただけます。",
+    },
+  ],
+  /** 申込フォームの「事業の形」の選択肢 */
+  businessTypes: [
+    "一人で事業をしている",
+    "小規模事業者（数名規模）",
+    "会社を経営している（従業員あり）",
+    "起業を考えている",
+    "その他",
   ],
 };
 
