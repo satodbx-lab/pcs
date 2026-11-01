@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "「AI社員を入れる」個別相談会のお申し込み",
   alternates: { canonical: "/consultation/apply" },
   description:
-    "「AI社員を入れる」個別相談会（副題：PCSスタイルの始め方）の専用申込ページです。オンライン・1時間・無料。日時はお申し込み後に個別に調整します。",
+    "「AI社員を入れる」個別相談会（副題：PCSスタイルの始め方）の専用申込ページです。オンライン（Zoom）・1時間・初回無料。日時はお申し込み後に個別に調整します。",
 };
 
 const heading = "mt-10 mb-4 text-[1.15rem] font-bold text-ink first:mt-0";
@@ -33,6 +33,11 @@ export default function ConsultationApplyPage() {
             </li>
           ))}
         </ul>
+
+        <p className="mt-5 rounded-md border border-brand/30 bg-brand/5 px-4 py-3 text-[0.92rem] leading-[1.85] text-ink">
+          <span className="font-bold text-brand">初回相談は無料です。</span>
+          相談会はZoomで行います。まずはお気軽にお申し込みください。
+        </p>
 
         <h2 className={heading}>相談できること</h2>
         <ul className="grid gap-4 sm:grid-cols-2">

@@ -24,7 +24,7 @@ export function ConsultationForm() {
         <p className="text-[0.95rem] font-bold text-ink">お申し込みを受け付けました</p>
         <p className="mt-2 text-[0.9rem] leading-[1.9] text-muted">
           {state.message}
-          日時はお申し込み後に個別に調整し、オンラインで1時間、無料でご相談いただけます。
+          日時はお申し込み後に個別に調整し、オンライン（Zoom）で1時間、初回は無料でご相談いただけます。
         </p>
       </div>
     );
@@ -65,6 +65,13 @@ export function ConsultationForm() {
         </p>
       ) : null}
 
+      <div className="rounded-md border border-brand/30 bg-brand/5 px-4 py-3 text-[0.88rem] leading-[1.85] text-ink">
+        <p className="font-bold text-brand">初回相談は無料です。</p>
+        <p className="mt-1">
+          相談会はZoomで行います。招待リンクはメールでお送りしますので、メールアドレスを正確にご記入ください。
+        </p>
+      </div>
+
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="flex flex-col gap-1.5 text-[0.82rem] font-medium text-muted">
           <span className="flex items-center gap-1.5">
@@ -85,6 +92,9 @@ export function ConsultationForm() {
             メールアドレス <span className="text-warn">必須</span>
           </span>
           <input name="email" type="email" required autoComplete="email" className={field} />
+          <span className="text-[0.76rem] font-normal">
+            Zoomの招待リンクは、このアドレスにお送りします
+          </span>
         </label>
         <label className="flex flex-col gap-1.5 text-[0.82rem] font-medium text-muted">
           <span>電話番号</span>
@@ -166,7 +176,7 @@ export function ConsultationForm() {
         {pending ? "送信中…" : "申し込む"}
       </button>
       <p className="font-mono text-[0.72rem] text-muted">
-        相談は無料・秘密厳守です。日時はお申し込み後に個別に調整します。
+        初回相談は無料・秘密厳守です。日時はお申し込み後に個別に調整します。
       </p>
     </form>
   );
